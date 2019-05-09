@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - getui_push_plugin (0.0.1):
+    - Flutter
+    - GTSDK
+  - GTSDK (2.4.0.0)
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - getui_push_plugin (from `.symlinks/plugins/getui_push_plugin/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GTSDK
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  getui_push_plugin:
+    :path: ".symlinks/plugins/getui_push_plugin/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+  getui_push_plugin: 45b02b02b3f419de7eb2f7a77804456fb31bd596
+  GTSDK: bba418c3949cd5450b004c7ff0e2fe297fa98565
+
+PODFILE CHECKSUM: aff02bfeed411c636180d6812254b2daeea14d09
+
+COCOAPODS: 1.6.1
