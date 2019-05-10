@@ -18,8 +18,13 @@ public class GetuiPushPlugin implements MethodCallHandler {
   public void onMethodCall(MethodCall call, Result result) {
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
+    }if (call.method.equals("start")) {
+      startSdk(call,result);
     } else {
       result.notImplemented();
     }
+  }
+  public void startSdk(MethodCall call,Result result){
+
   }
 }
