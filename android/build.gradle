@@ -16,6 +16,10 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        // 个推添加
+        maven {
+            url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
+        }
     }
 }
 
@@ -31,4 +35,11 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+dependencies {
+    // 个推添加
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.getui:sdk:2.13.2.0'
+    implementation 'com.android.support:appcompat-v7:24.2.1'
+
 }

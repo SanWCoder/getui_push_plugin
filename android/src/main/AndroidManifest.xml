@@ -1,3 +1,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.haoliu.getui_push_plugin">
+    <!--<uses-permission android:name="android.permission.READ_LOGS" />-->
+    <!-- io.flutter.app.FlutterApplication is an android.app.Application that
+         calls FlutterMain.startInitialization(this); in its onCreate method.
+         In most cases you can leave this as-is, but you if you want to provide
+         additional functionality it is fine to subclass or reimplement
+         FlutterApplication and put your custom class here. -->
+    <application>
+        <!--// 个推-->
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复-->
+        <service android:name=".GetuiPushPlugin$HLReceiveService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <!-- 配置SDK核心服务 -->
+        <!-- process必须指定为":pushservice"，切勿随意更改 -->
+        <service
+            android:name=".HLPushCarrierService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice">
+        </service>
+        <receiver android:name=".PushReceiver">
+            <intent-filter>
+                <action android:name="notification_clicked"/>
+                <action android:name="notification_cancelled"/>
+            </intent-filter>
+        </receiver>
+    </application>
 </manifest>

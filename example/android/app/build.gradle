@@ -39,6 +39,11 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID : "6DhV9qwu6x5PvhczVjMJu6",
+                GETUI_APP_KEY : "EtMccieMV36yAVMIoVbe29",
+                GETUI_APP_SECRET : "aqPk0nUhmX89ZCGty7iaI"
+        ]
     }
 
     buildTypes {
@@ -58,4 +63,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // 个推添加
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.getui:sdk:2.13.2.0'
 }
