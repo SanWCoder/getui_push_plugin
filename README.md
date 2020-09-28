@@ -1,6 +1,6 @@
 # getui_push_plugin
 
-A new Flutter plugin.
+个推Flutter 插件
 
 ## Getting Started
 
