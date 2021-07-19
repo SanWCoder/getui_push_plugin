@@ -1,6 +1,6 @@
 # getui_push_plugin
 
-个推Flutter 插件
+个推 iOS端 Flutter 插件
 
 ## Getting Started
 
